@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time-Based Background</title>
+    <script type="text/javascript">
+        function setBackgroundColor() {
+            var today = new Date();
+            var minutes = today.getMinutes();
+            var body = document.body;
+            
+            if (minutes >= 0 && minutes <= 30) {
+                body.style.backgroundColor = "blue";
+                body.style.color = "white";
+            } else {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+            }
+            
+            // Display current time for reference
+            document.getElementById("time").innerHTML = "Current time: " + today.toLocaleTimeString();
+            document.getElementById("minutes").innerHTML = "Minutes: " + minutes;
+        }
+    </script>
+</head>
+<body onload="setBackgroundColor()">
+    <h1>Time-Based Background Color</h1>
+    <p>The background changes based on the current minute:</p>
+    <ul>
+        <li>Minutes 0-30: Blue background</li>
+        <li>Minutes 31-59: Black background</li>
+    </ul>
+    <p id="time"></p>
+    <p id="minutes"></p>
+    <button onclick="setBackgroundColor()">Refresh Colors</button>
+</body>
+</html>

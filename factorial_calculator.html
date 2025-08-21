@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+    <script type="text/javascript">
+        // Calculate factorial
+        var fac = 1, i, n;
+        n = prompt("Enter the value");
+        
+        // Convert to number and add basic validation
+        n = parseInt(n);
+        
+        if (n >= 0) {
+            for (i = 1; i <= n; i++) {
+                fac = fac * i;
+            }
+            document.write("Factorial of " + n + " is: " + fac);
+        } else {
+            document.write("Please enter a non-negative number");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
